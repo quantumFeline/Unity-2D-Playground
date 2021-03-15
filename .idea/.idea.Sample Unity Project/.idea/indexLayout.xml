@@ -29,7 +29,6 @@
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>
-      <Path>Unity_test_project</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

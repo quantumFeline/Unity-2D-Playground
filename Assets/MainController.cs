@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    //private CharacterController _controller;
+    /*//private CharacterController _controller;
     private float playerSpeed = 2.0f;
     private Collider2D _collider;
     //private CollidingBehaviour _behaviour;
     private Vector3 _lastMove;
-    
+
     // Start is called before the first frame update
     void Start()
     {
+        GeneralScript.GameStart();
         _collider = gameObject.GetComponent<BoxCollider2D>();
         //_behaviour = gameObject.GetComponent<CollidingBehaviour>();
         Debug.Log(_collider);
@@ -27,9 +28,9 @@ public class MainController : MonoBehaviour
             gameObject.transform.position -= _lastMove;
         }
         else
-        {*/
+        {
             _lastMove = moveAdjusted;
             gameObject.transform.position += moveAdjusted;
         //}
-    }
+    }*/
 }

@@ -17,14 +17,14 @@ public class PlayerCollision : MonoBehaviour
         if (collision.rigidbody.gameObject.CompareTag("Floor"))
         {
             grounds++;
+           // var curSpeed = gameObject.GetComponent<Movement>().CurrSpeed;
         }
-        var curSpeed = gameObject.GetComponent<Movement>().CurrSpeed;
         //gameObject.transform.position -=  new Vector3(curSpeed.x, curSpeed.y, 0) * Time.deltaTime;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log("Collision exit");
+        //Debug.Log("Collision exit");
         collided = false;
         if (collision.rigidbody.gameObject.CompareTag("Floor"))
         {

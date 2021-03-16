@@ -16,6 +16,7 @@ public class MovementRigidBody : MonoBehaviour
         rb = transform.GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         _collisionInfo = gameObject.GetComponent<PlayerCollision>();
+        GeneralScript.GameStart();
     }
 
     // Update is called once per frame

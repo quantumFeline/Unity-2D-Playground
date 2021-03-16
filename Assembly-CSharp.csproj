@@ -59,10 +59,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ColorChanger.cs" />
+     <Compile Include="Assets\GeneralScript.cs" />
      <Compile Include="Assets\MainController.cs" />
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\MovementRigidBody.cs" />
      <Compile Include="Assets\PlayerCollision.cs" />
+     <Compile Include="Assets\PlayerScore.cs" />
+     <Compile Include="Assets\Trigger.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/home/rony/Unity/Sample Unity Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

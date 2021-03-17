@@ -22,29 +22,28 @@ public class MovementRigidBody : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_collisionInfo.Grounds > 0 && Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.velocity = Vector2.up * jumpVelocity;
-        }
-        HorizontalMovement();
+        rb.velocity = new Vector2(HorizontalMovement(), VerticalMovement());
     }
-    void HorizontalMovement()
+    float HorizontalMovement()
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.velocity = new Vector2(-horizontalVelocity, rb.velocity.y);
+            return -horizontalVelocity;
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            rb.velocity = new Vector2(horizontalVelocity, rb.velocity.y);
+            return horizontalVelocity;
         }
-        else
-        {
-            if(_collisionInfo.Grounds > 0)
-            {
-                rb.velocity = new Vector2(0, rb.velocity.y);
-            }         
+        return 0;
+    }
+
+    float VerticalMovement()
+    {
+        if (_collisionInfo.IsGrounded() && Input.GetKeyDown(KeyCode.Space)) {
+            return jumpVelocity;
         }
+        return rb.velocity.y;
     }
         
 }

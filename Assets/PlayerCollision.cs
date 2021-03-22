@@ -44,9 +44,9 @@ public class PlayerCollision : MonoBehaviour
         var hit = new RaycastHit2D[2];
         var height = _collider.bounds.size.y;
         var center = gameObject.transform.position;
-        var bottom = center - new Vector3(0, height / 2f, 0);
+        var bottom = center + height / 2f * Physics.gravity.normalized;
         var dist = 0.2f;
-        var hitN = Physics2D.Raycast(bottom, Vector2.down, new ContactFilter2D().NoFilter(), hit, dist);
+        var hitN = Physics2D.Raycast(bottom, Physics2D.gravity, new ContactFilter2D().NoFilter(), hit, dist);
         Debug.DrawRay(bottom, Vector3.down * dist, Color.yellow, 3);
         //Debug.Log(hitN);
         return hitN != 0;

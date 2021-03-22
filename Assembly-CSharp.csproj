@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\ColorChanger.cs" />
      <Compile Include="Assets\GeneralScript.cs" />
+     <Compile Include="Assets\LoadLevel.cs" />
      <Compile Include="Assets\MainController.cs" />
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\MovementRigidBody.cs" />

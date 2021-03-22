@@ -6,13 +6,14 @@ using System;
 public class MovementRigidBody : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private const float jumpVelocity = 10f;
+    public float jumpVelocity;
     private const float horizontalVelocity = 5f;
 
     private PlayerCollision _collisionInfo;
     // Start is called before the first frame update
     void Start()
     {
+        jumpVelocity = - Physics2D.gravity.y;
         rb = transform.GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         _collisionInfo = gameObject.GetComponent<PlayerCollision>();

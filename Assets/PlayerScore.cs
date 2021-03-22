@@ -10,7 +10,7 @@ public class PlayerScore : MonoBehaviour
     public void RaiseScore()
     {
         score++;
-        if (score == 3)
+        if (score == 1)
         {
             Debug.Log("You won!");
             GameObject.Find("WinSprite").GetComponent<Renderer>().enabled = true;
